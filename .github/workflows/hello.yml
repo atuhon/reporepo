@@ -4,7 +4,7 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         env:
-         ACTOR: ${{ format('nozaki,ntama.','Hiworld')}}
+         ACTOR: ${{ format('と{0},{2},{1}','ら','ラ','ド')}}
         steps:
             - run: echo "${ACTOR}" 
             - uses: actions/checkout@v4
