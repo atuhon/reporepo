@@ -4,8 +4,8 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         env:
-         EVENT: ${{ github.event.*.html_url}}
+         ACTOR: ${{ contains(github.event.issue.labels.*.name,'bug') }}
         steps:
-            - run: echo "${EVENT}" 
+            - run: echo "${ACTOR}" 
             - uses: actions/checkout@v4
             
