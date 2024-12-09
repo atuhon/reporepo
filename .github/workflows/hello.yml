@@ -4,9 +4,10 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         env:
-         ACTOR: ${{ github.event.issue.labels.*.name }}
+         ACTOR: ${{ 'hello' }}
 
         steps:
             - run: echo "${ACTOR}" 
+              if: ${{contains(github.run_id,1)}}
             - uses: actions/checkout@v4
             
