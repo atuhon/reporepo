@@ -3,7 +3,9 @@ on: push
 jobs: 
     hello:
         runs-on: ubuntu-latest
+        env:
+         ACTOR: ${{ github.runner.os }}
         steps:
-            - run: echo "${{ runner.os }}"
+            - run: echo "${ACTOR}"
             - uses: actions/checkout@v4
             
