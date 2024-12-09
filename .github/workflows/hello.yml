@@ -3,11 +3,10 @@ on: push
 jobs: 
     hello:
         runs-on: ubuntu-latest
-        env:
-         ACTOR: ${{ 'hello' }}
+        
 
         steps:
-            - run: echo "${ACTOR}" 
+            - run: echo "hel" 
               if: ${{contains(github.run_id,'1')}}
             - uses: actions/checkout@v4
             
