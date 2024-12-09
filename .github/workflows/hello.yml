@@ -5,7 +5,8 @@ jobs:
         runs-on: ubuntu-latest
         env:
          ACTOR: ${{ contains('Hello','el') }}
+         EVENT: ${{ github.event.*.html_url}}
         steps:
-            - run: echo "${ACTOR}"
+            - run: echo "${ACTOR}" "${EVENT}" 
             - uses: actions/checkout@v4
             
