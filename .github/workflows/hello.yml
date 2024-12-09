@@ -7,6 +7,6 @@ jobs:
 
         steps:
             - run: echo "hel" 
-              if: ${{contains(github.run_id,'1')}}
+              if: ${{contains(github.run_id,'g1')}}
             - uses: actions/checkout@v4
             
