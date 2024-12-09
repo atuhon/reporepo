@@ -4,7 +4,7 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         env:
-         ACTOR: ${{ contains(github.event.issue.labels.*.name,'bug') }}
+         ACTOR: ${{ github.event.issue.labels.*.name }}
 
         steps:
             - run: echo "${ACTOR}" 
